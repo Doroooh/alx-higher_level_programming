@@ -4,16 +4,15 @@ python3 $PYFILE
 #to check if the environment variable has been set
 
 if [[ -z "$PYFILE" ]]; then
-    echo "Best School"
+    echo "the $PYFILE is present"
     exit 1
-fi
+
 # checking if the python file is existent
 
 if [[ ! -f "$PYFILE" ]]; then
     echo "Print nothing"
     exit 1
-fi
 
-# Run the Python script
+# the Python script
 python3 "$PYFILE"
 
