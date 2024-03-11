@@ -1,5 +1,5 @@
 #!/usr/bin/python3
+#am doing an integer question here
 
-number = 98
-print(f"{number} Battery street")
-#this code will print an integer using the print function
+x = 98
+print(f"{x:d} Battery street")
