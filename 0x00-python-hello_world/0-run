@@ -14,3 +14,4 @@ fi
 
 # Run the Python script
 python3 "$PYFILE"
+
