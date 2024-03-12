@@ -6,7 +6,7 @@ number = random.randint(-10000, 10000)
 last_digit = abs(number) % 10
 
 if number < 0:
-    last_digit = -(last_digit)
+    last_digit *= -(last_digit)
 in_the_string = "last digit of {} is {}".format(number, last_digit)
 if last_digit > 5:
     print(f"{in_the_string} and is greater than 5")
