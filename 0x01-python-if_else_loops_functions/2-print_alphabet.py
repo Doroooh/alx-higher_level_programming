@@ -1,3 +1,4 @@
-for i in range(ord('a'), ord('z')+1):
-    print(chr(i), end='')
-print()
+#!/usr/bin/python3
+# Am printing the lowercase alphabets
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
