@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-# printing uppercase letters taht is capital letters
+# printing uppercase letters that is capital letters
 def uppercase(str):
-    for a in str:
-        if ord(a) >= 97 and ord(a) <= 122:
-            a = chr(ord(a) - 32)
-            print("{}".format(a), end="")
-            print("")
+    for char in str:
+        if ord('a') <= ord(char) <= ord('z'):
+            upper_char = chr(ord(char) - 32)
+        else:
+            upper_char = char
+        print("{}".format(upper_char), end="")
+    print()
