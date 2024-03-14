@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-if_name_ == "_main_":
 # Importing the add function from add_0.py
 from add_0 import add 
 # Defining my two variables a and b
