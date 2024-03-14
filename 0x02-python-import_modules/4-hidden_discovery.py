@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-import dis
-
-def print_names(filename):
-    with open(filename, 'rb') as f:
-        code = f.read()
-    dis.dis(code)
-    print_names("hidden_4.pyc")
-
+if __name__ == "__main__":
+    import hidden_4
+    for name in dir(hidden_4):
+        if not name.startswith('__'):
+            print(name)
