@@ -9,7 +9,7 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	int i;
+	int k;
 	PyObject *v;
 	PyListObject *list;
 	Py_ssize_t len;
@@ -22,9 +22,9 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Size of the Python List = %zu\n", len);
 	printf("[*] Allocated = %zu\n", list->allocated);
 
-	for (i = 0; i < len; i++)
+	for (k = 0; k < len; k++)
 	{
-		v = PyList_GET_ITEM(p, i);
-		printf("Element %d: %s\n", i, (v->ob_type)->tp_name);
+		v = PyList_GET_ITEM(p, k);
+		printf("Element %d: %s\n", k, (v->ob_type)->tp_name);
 	}
 }
