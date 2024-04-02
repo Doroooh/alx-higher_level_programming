@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""Square generation module for Python project 0x06
-"""
 
+#!/usr/bin/python3
 
-class Square:
-    """class defined for square generation
-    """
+class CustomSquare:
+    """A class for representing a square with a specified size."""
     def __init__(self, size=0):
-        if type(size) is not int:
-            raise TypeError('size must be an integer')
+        """Initialize a square object with a given size."""
+        if not isinstance(size, int):
+            raise TypeError('Size must be an integer')
         if size < 0:
-            raise ValueError('size must be >= 0')
+            raise ValueError('Size must be non-negative')
         self.__size = size
