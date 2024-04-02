@@ -1,16 +1,30 @@
 #!/usr/bin/python3
-def list_division(my_list_1, my_list_2, list_length):
-    new = [0] * list_length
-    for i in range(list_length):
+
+def list_division(my_lst1, my_lst2, lst_len):
+    """
+    Performing element-wise division between the two lists and handling exceptions.
+
+    Args:
+        my_lst1 (list): my first list.
+        my_lst2 (list): my second list.
+        lst_len (int): length of lists.
+
+    Returns:
+        list: A new list that contains results of element-wise division.
+    """
+
+    new = [0] * lst_len
+
+    for k in range(lst_len):
         try:
-            result = my_list_1[i] / my_list_2[i]
-            new[i] = result
+            result = my_lst1[k] / my_lst2[k]
         except ZeroDivisionError:
             print("division by 0")
         except TypeError:
             print("wrong type")
         except IndexError:
             print("out of range")
-        finally:
-            pass
+        else:
+            new[k] = result
+
     return new
