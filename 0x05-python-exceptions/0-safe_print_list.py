@@ -1,19 +1,14 @@
-#!/usr/bin/env python3
-
-def safe_print_list(my_list=None, x=0):
-    if my_list is None:
-        my_list = []
+#!/usr/bin/python3
+def safe_print_list(my_list=[], x=0):
     count = 0
 
-    for index in range(x):
+    for i in range(x):
         try:
-            print(my_list[index], end='')
-            count += 1
-        except IndexError:
-            # Break out of the loop if we try to access beyond the list's length
+            print("{}".format(my_list[i]), end='')
+        except:
             break
+        else:
+            count += 1
 
-    # Ensuring the output starts on a new line after the list elements are printed
     print()
-
-    return count
+    return (count)
