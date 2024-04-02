@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Square generation module for Python project 0x06
+"""Square generation
 """
 
 
 class Square:
-    """Class defined for square generation.
+    """the class defined for square generation.
 
     Args:
-        size (int): length of one side of square
+        size (int): length of one side of the square
 
     Attributes:
         __size (int): length of one side of square
@@ -28,9 +28,9 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, value):
+    def size(self, value1):
         """Args:
-            value (int): length of one side of square
+            value1 (int): length of one side of square
 
         Attributes:
             __size (int): length of one side of square
@@ -40,14 +40,14 @@ class Square:
             ValueError: if value is less than 0
 
         """
-        if type(value) is not int:
+        if type(value1) is not int:
             raise TypeError('size must be an integer')
-        if value < 0:
+        if value1 < 0:
             raise ValueError('size must be >= 0')
-        self.__size = value
+        self.__size = value1
 
     def area(self):
-        """Calulates area of square.
+        """It calulates area of square.
 
         Attributes:
             __size (int): length of one side of square
