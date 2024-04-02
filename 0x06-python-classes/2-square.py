@@ -1,19 +1,22 @@
 #!/usr/bin/python3
 
-class Square:
-    """
-    class square that has attributes:
-        size
-    some attributes are protected from input.
-    """
+class Square():
+    """Defining a square."""
+
     def __init__(self, size=0):
+        """Setting necessary attributes for Square object.
+
+        Args:
+            size (int): size of one edge of the square.
+
+        Raises:
+            TypeError: if the size is not given as an integer.
+            ValueError: if the size is less than 0.
         """
-        initialization function for the square class
-        checks for input errors for size
-        """
-        if type(size) != int:
-            raise TypeError("the size must be an integer")
-        elif size < 0:
-            raise ValueError("the size must be >= 0")
+        if type(size) is int:
+            if size >= 0:
+                self.__size = size
+            else:
+                raise ValueError("the size must be >= 0")
         else:
-            self.__size = size
+            raise TypeError("the size must be an integer")
