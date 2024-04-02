@@ -1,26 +1,25 @@
 #!/usr/bin/python3
 
-def safe_print_list(my_list=[], x=0):
+def safe_print_list(my_lst=None, x=0):
     """
-    Prints the first 'x' elements of a list.
+    Printing the first 'x' elements of a list.
 
     Args:
-        my_list (list): The list to print elements from.
-        x (int): The number of elements to print.
+        my_lst (list): List to print elements from.
+        x (int): Number of elements to print.
 
     Returns:
-        int: The number of elements actually printed.
-
+        int: Number of elements actually printed.
     """
+    if my_lst is None:
+        my_lst = []
+
     try:
         count = 0
-        for elem in my_list:
-            if count < x:
-                print("{} ".format(elem), end="")
-                count += 1
-            else:
-                break
-        print("")  # Add a newline after printing elements.
+        for elemt in my_lst[:x]:
+            print("{} ".format(elemt), end="")
+            count += 1
+        print()  # Adding a newline after printing the element.
         return count
     except Exception as e:
         print("Exception: {}".format(e))
