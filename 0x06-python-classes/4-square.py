@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Square generation module for Python project 0x06
+"""Square generation 
 """
 
 
 class Square:
-    """Class defined for square generation.
+    """Class for square generation.
 
     Args:
         size (int): length of one side of square
