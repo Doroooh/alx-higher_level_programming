@@ -1,11 +1,19 @@
 #!/usr/bin/python3
 
-class CustomSquare:
-    """A class for representing a square with a specified size."""
+class Square:
+    """
+    class square that has attributes:
+        size
+    some attributes are protected from input.
+    """
     def __init__(self, size=0):
-        """Initialize a square object with a given size."""
-        if not isinstance(size, int):
-            raise TypeError('Size must be an integer')
-        if size < 0:
-            raise ValueError('Size must be non-negative')
-        self.__size = size
+        """
+        initialization function for the square class
+        checks for input errors for size
+        """
+        if type(size) != int:
+            raise TypeError("the size must be an integer")
+        elif size < 0:
+            raise ValueError("the size must be >= 0")
+        else:
+            self.__size = size
