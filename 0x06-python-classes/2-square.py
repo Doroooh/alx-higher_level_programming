@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-#!/usr/bin/python3
-
 class CustomSquare:
     """A class for representing a square with a specified size."""
     def __init__(self, size=0):
