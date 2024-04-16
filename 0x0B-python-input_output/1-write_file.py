@@ -1,14 +1,14 @@
-#!/usr/bin/env python3
-"""
-write_file module.
+#!/usr/bin/python3
+"""write_file module.
 
 Contains a function that writes a text file.
 """
 
-def write_file(filename: str = "", text: str = "") -> int:
+
+def write_file(filename="", text=""):
     """
-    Writes a string to a text file (UTF-8) and
+    Writes a string to a text file (UTF8) and
     returns the number of characters written.
     """
-    with open(filename, 'w', encoding='utf-8') as file:
-        return file.write(text)
+    with open(filename, 'w') as f:
+        return f.write(text)
