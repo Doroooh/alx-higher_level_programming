@@ -1,11 +1,11 @@
 #!/usr/bin/node
-// computes and prints a factorial
+// computing and printing a factorial
 
-function factorial (n) {
-  if ((isNaN(n)) || (n === 1)) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
+function factorial (k) {
+	if ((isNaN(k)) || (k === 1)) {
+		return 1;
+} else {
+    return k * factorial(k - 1);
   }
 }
 
