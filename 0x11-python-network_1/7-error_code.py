@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-"""Sending the request to an URL then  displaying the response body.
+"""Sending the request to a url then  printing responses"""
 
-Usage: ./7-error_code.py <URL>
-this is for handling the HTTP errors.
+from requests import get
+from sys import argv
+
+
+def request_header_property(url: str) -> str:
+"""sending the requests to URL, and getting responses
+   , also handles exceptions  Args
+   url (str) is the URL to query
 """
-
-import sys
-import requests
-
-
+    response = get(url)
+    if int(response.status_code) >= 400:
+        return ("Error code: {}".format(response.status_code))
+    return response.text
 if __name__ == "__main__":
-    url = sys.argv[1]
-
-    a = requests.get(url)
-    if a.status_code >= 400:
-        print("Error code.{} format(a.status_code))
-    else:
-        print(a.text)
+    print(request_header_property(argv[1]))
