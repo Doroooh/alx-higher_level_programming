@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""script for finding peak in list of ints, interview prep
+"""script to find peak in list of ints, interview prep
 """
 
 """
     THOUGHT PROCESS
-        it is not sorted, so sorting would take n(log(n))
+        it's not sorted; sorting would take n(log(n))
             -> not worth sorting
         looping through and keeping track of max (brute force)
             -> O(n)
@@ -17,8 +17,8 @@
 def find_peak(list_of_integers):
     """BRUTE force implementation for question
     """
-    max_i = None
+    max_k = None
     for ele in list_of_integers:
-        if max_i is None or max_i < ele:
-            max_i = ele
-    return max_i
+        if max_k is None or max_k < ele:
+            max_k = ele
+    return max_k
