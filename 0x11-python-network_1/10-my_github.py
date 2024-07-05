@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""Using  GitHub API, it will display a GitHub identity that is based on given credentials.
+"""
+Use the  GitHub API, displays the GitHub identity based on given credentials.
 
-Usage: ./10-my_github.py <GitHub username> <GitHub password>
-  - it will use Basic Authentication processes in accessing theidentity - ID.
 """
 
 import sys
