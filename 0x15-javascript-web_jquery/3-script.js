@@ -1,6 +1,6 @@
-// script that adds the class red to the <header> element when the user
-// clicks on the tag DIV#red_header
-const $ = window.$;
-$('#red_header').bind('click', function () {
-  $('header').addClass('red');
+// This script will add red color to the header on the red-header click
+
+const jQuery = window.$;
+jQuery('#color_trigger').on('click', function () {
+  jQuery('header').toggleClass('red');
 });
