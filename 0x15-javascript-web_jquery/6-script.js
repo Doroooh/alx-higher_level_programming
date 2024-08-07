@@ -1,6 +1,7 @@
-// script that updates the text of the <header> element to New Header!!!
-//  when the user clicks on DIV#update_header
-const $ = window.$;
-$('#update_header').bind('click', function () {
-  $('header').replaceWith('New Header!!!');
+// Update with DIV#update_header on <header> element 
+
+$(document).ready(function () {
+  $('DIV#update_header').click(function () {
+    $('header').html('New Header!!!');
+  });
 });
