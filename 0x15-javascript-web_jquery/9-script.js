@@ -1,7 +1,11 @@
-//  script that fetches from https://fourtonfish.com/hellosalut/?lang=fr and
-// displays the value of hello from that fetch in the HTML tag DIV#hello.
-const $ = window.$;
-$.get('https://fourtonfish.com/hellosalut/?lang=fr', function (data, status) {
-  console.log(data.hello);
-  $('#hello').html(data.hello);
+//  Fetch the value hello from URL https://hellosalut.stefanbohacek.dev/?lang=fr 
+// the value of hello is displayed in the tag DIV#hello 
+
+$(document).ready(function() {
+  // translate Hello in French 
+  $.get('https://hellosalut.stefanbohacek.dev/?lang=fr', function(data) {
+    console.log(data.hello);
+    // Displaying hello
+    $('#hello').html(data.hello);
+  });
 });
