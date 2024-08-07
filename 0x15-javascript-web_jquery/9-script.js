@@ -6,6 +6,6 @@ $(document).ready(function() {
   $.get('https://hellosalut.stefanbohacek.dev/?lang=fr', function(data) {
     console.log(data.hello);
     // Displaying hello
-    $('#hello').html(data.hello);
+    $('DIV#hello').html(data.hello);
   });
 });
