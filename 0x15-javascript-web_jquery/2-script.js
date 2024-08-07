@@ -1,8 +1,7 @@
-// This JavaScript script will update header element text color 
-// to red (#FF0000) when the user clicks #red_header:
+// Update header element text color with #FF0000, red, tag DIV#red_header
 
 $(document).ready(function() {
-    $('#red_header').click(function() {
-        $('header').css('color', '#FF0000');
+    $('DIV#red_header').click(function() {
+        $('DIV#red_header').css({ color: '#FF0000' });
     });
 });
